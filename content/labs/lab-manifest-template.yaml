@@ -1,0 +1,51 @@
+lab:
+  id: "domain-lab-000"
+  version: "0.1.0"
+  title: "Lab title"
+  domain: ""
+  difficulty: "beginner"
+  learning_objectives: []
+  prerequisites: []
+
+environment:
+  type: "container" # container | disposable_vm | aws_sandbox
+  image_allowlist: []
+  synthetic_data_only: true
+  disposable: true
+
+scope:
+  authorized_targets: []
+  prohibited_targets: ["public internet", "third-party systems", "personal devices"]
+  network_egress: "deny_by_default"
+  allowed_destinations: []
+
+limits:
+  cpu: 1
+  memory_mb: 512
+  pids: 128
+  disk_mb: 1024
+  duration_minutes: 30
+  concurrent_sessions: 1
+
+execution:
+  entrypoint: ""
+  learner_access: "instructions_only"
+  telemetry_sources: []
+  expected_observations: []
+
+evaluation:
+  automated_checks: []
+  practical_deliverables: []
+  rubric: []
+
+cleanup:
+  automatic: true
+  timeout_seconds: 60
+  verify_resources_removed: true
+  report_cleanup_failure: true
+
+security_review:
+  approved: false
+  reviewer: null
+  reviewed_at: null
+  threat_model_reference: null

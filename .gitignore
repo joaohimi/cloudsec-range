@@ -1,0 +1,35 @@
+# Arquivos de ambiente e segredos
+.env
+.env.*
+*.env
+.env.local
+.env.development
+.env.production# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+npm-debug.log*
+
+# Python
+__pycache__/
+# Arquivos de ambiente e segredos
+.env.example
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Runtime data and local artifacts
+.local/
+coverage/

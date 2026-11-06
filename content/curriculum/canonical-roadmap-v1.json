@@ -1,0 +1,110 @@
+{
+  "version": {
+    "code": "roadmap-v1",
+    "title": "Mapa original de estudos — Linux e Networking",
+    "source_filename": "Cronograma de estudo — Redes e Linux (1).pdf",
+    "status": "active",
+    "notes": "Importação da estrutura recebida do utilizador. Ordem original, identificadores, blocos e horas por módulo são preservados. O conteúdo detalhado das competências será desenvolvido e validado separadamente."
+  },
+  "tracks": [
+    {
+      "code": "LINUX",
+      "title": "Linux",
+      "description": "Fundamentos e administração Linux orientados a operações, DevOps necessário, Cloud e Cloud Security.",
+      "position": 1,
+      "blocks": [
+        {"code":"L1","position":1,"modules":[
+          {"source_module_code":"M1","title":"Arquitetura e ecossistema","hours":6},
+          {"source_module_code":"M2","title":"Terminal, shell e comandos (vim/nano, tmux)","hours":10},
+          {"source_module_code":"M3","title":"Sistema de ficheiros (tar/gzip)","hours":14},
+          {"source_module_code":"M4","title":"Texto e streams (jq)","hours":14},
+          {"source_module_code":"M7","title":"Pacotes e software","hours":8}
+        ]},
+        {"code":"L2","position":2,"modules":[
+          {"source_module_code":"M5","title":"Utilizadores, grupos e privilégios","hours":8},
+          {"source_module_code":"M6","title":"Permissões e ACLs","hours":12},
+          {"source_module_code":"M8","title":"Variáveis, ambiente e configuração","hours":8},
+          {"source_module_code":"M23","title":"Programação Bash","hours":16}
+        ]},
+        {"code":"L3","position":3,"modules":[
+          {"source_module_code":"M9","title":"Processos e sinais","hours":10},
+          {"source_module_code":"M10","title":"systemd e logs (logrotate, rsyslog, chrony)","hours":16},
+          {"source_module_code":"M11","title":"Arranque, kernel e módulos","hours":8},
+          {"source_module_code":"M12","title":"Tarefas agendadas","hours":6}
+        ],"environment_lab":{"code":"LINUX-LAB-0","title":"Lab 0 — Ambiente de laboratório","hours":6,"description":"Preparação e validação do ambiente de laboratório Linux."}},
+        {"code":"L4","position":4,"modules":[
+          {"source_module_code":"M13","title":"Discos e sistemas de ficheiros (NFS)","hours":14},
+          {"source_module_code":"M14","title":"Espaço, memória e desempenho","hours":12},
+          {"source_module_code":"M15","title":"LVM, RAID e LUKS","hours":14}
+        ]},
+        {"code":"L5","position":5,"modules":[
+          {"source_module_code":"M16","title":"Networking em Linux (aula única com Redes 19 e 20)","hours":6},
+          {"source_module_code":"M17","title":"SSH e administração remota","hours":8}
+        ]},
+        {"code":"L6","position":6,"modules":[
+          {"source_module_code":"M19","title":"Segurança de identidades","hours":8},
+          {"source_module_code":"M20","title":"Hardening do sistema (CIS)","hours":16},
+          {"source_module_code":"M21","title":"Criptografia, certificados e segredos","hours":12},
+          {"source_module_code":"M18","title":"Troubleshooting profissional","hours":14},
+          {"source_module_code":"M22","title":"Backup, recuperação e incidentes","hours":10}
+        ]},
+        {"code":"L7","position":7,"modules":[
+          {"source_module_code":"M24","title":"Bash avançado (ShellCheck)","hours":14},
+          {"source_module_code":"M25","title":"Automação operacional","hours":10}
+        ]},
+        {"code":"L8","position":8,"modules":[
+          {"source_module_code":"M26","title":"Containers e isolamento","hours":14}
+        ]},
+        {"code":"L9","position":9,"modules":[
+          {"source_module_code":"M29","title":"Observabilidade e fiabilidade","hours":10},
+          {"source_module_code":"M30","title":"Administração profissional e exame final","hours":14}
+        ]}
+      ]
+    },
+    {
+      "code": "NETWORKING",
+      "title": "Networking",
+      "description": "Redes de computadores, protocolos, operação, troubleshooting e segurança de rede.",
+      "position": 2,
+      "blocks": [
+        {"code":"F1","position":1,"modules":[
+          {"source_module_code":"01","title":"Introdução às redes","hours":6},
+          {"source_module_code":"02","title":"Fundamentos de transmissão","hours":6},
+          {"source_module_code":"03","title":"Modelos OSI e TCP/IP","hours":8}
+        ]},
+        {"code":"F2","position":2,"modules":[
+          {"source_module_code":"04","title":"Ethernet e camada de ligação","hours":8},
+          {"source_module_code":"05","title":"Switching","hours":8},
+          {"source_module_code":"06","title":"VLANs e segmentação (VXLAN)","hours":10}
+        ]},
+        {"code":"F3","position":3,"modules":[
+          {"source_module_code":"07","title":"IPv4 em profundidade","hours":8},
+          {"source_module_code":"08","title":"Subnetting e supernetting","hours":12},
+          {"source_module_code":"09","title":"Routing (NAT e PAT)","hours":10},
+          {"source_module_code":"10","title":"IPv6","hours":6}
+        ]},
+        {"code":"F4","position":4,"modules":[
+          {"source_module_code":"11","title":"TCP e UDP","hours":10},
+          {"source_module_code":"12","title":"DNS (DNSSEC, EDNS0, DoT)","hours":14},
+          {"source_module_code":"13","title":"DHCP","hours":6},
+          {"source_module_code":"14","title":"Protocolos de aplicação (HTTP/2, HTTP/3 e TLS)","hours":14}
+        ]},
+        {"code":"F5","position":5,"modules":[
+          {"source_module_code":"15","title":"Routing avançado","hours":10},
+          {"source_module_code":"16","title":"Wi-Fi e redes de acesso","hours":6},
+          {"source_module_code":"17","title":"VPN","hours":10},
+          {"source_module_code":"18","title":"Alta disponibilidade, QoS e load balancing (reverse proxy)","hours":10}
+        ]},
+        {"code":"F6","position":6,"modules":[
+          {"source_module_code":"19","title":"Networking em Linux","hours":16},
+          {"source_module_code":"20","title":"Diagnóstico e captura","hours":12}
+        ]},
+        {"code":"F7","position":7,"modules":[
+          {"source_module_code":"21","title":"Fundamentos de segurança de rede","hours":8},
+          {"source_module_code":"22","title":"Segurança de protocolos e acesso (PKI, mTLS e ACME)","hours":10},
+          {"source_module_code":"23","title":"Monitorização e resposta","hours":6}
+        ]}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+ticket:
+  key: "TEAM-000"
+  title: "Clear problem statement"
+  department: ""
+  priority: "medium"
+  status: "backlog"
+  competency_codes: []
+
+company_context:
+  business_situation: ""
+  affected_assets: []
+  dependencies: []
+  business_impact: ""
+  initial_observations: []
+
+scope:
+  authorized_targets: []
+  prohibited_targets: ["public internet", "third-party systems", "personal devices"]
+  environment_id: ""
+  prerequisites: []
+
+work:
+  investigation_tasks: []
+  troubleshooting_tasks: []
+  implementation_tasks: []
+  change_request_required: true
+  rollback_plan_required: true
+
+acceptance:
+  measurable_criteria: []
+  validation_tests: []
+  security_checks: []
+  evidence_required: []
+  documentation_required: []
+
+review:
+  technical_review_checklist: []
+  rubric: []
+  critical_failure_conditions: []
+
+safety:
+  lab_only: true
+  synthetic_data_only: true
+  external_egress: "deny_by_default"
+  cleanup_required: true

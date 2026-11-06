@@ -1,0 +1,47 @@
+competency:
+  code: "REPLACE-WITH-CANONICAL-CODE"
+  title: "Canonical competency title"
+  source_module_code: "REQUIRED-CANONICAL-MODULE-CODE"
+  source_order: 0
+  source_reference: "Reference to the user's original study map"
+  prerequisites: []
+
+learning_center:
+  definition: ""
+  learning_objectives: []
+  terminology: []
+  technical_explanation_sections: []
+  official_references: []
+  real_world_examples: []
+  guided_labs: []
+  independent_exercises: []
+  troubleshooting_scenarios: []
+  assessment_rubric: []
+
+internship_center:
+  company_context: "Nexus Digital Services"
+  department: ""
+  fictional_assets: []
+  work_tickets: []
+  investigation_tasks: []
+  implementation_tasks: []
+  validation_criteria: []
+  review_checklist: []
+  required_deliverables: []
+
+security:
+  risks_and_controls: []
+  attack_simulation: "not_applicable"
+  defensive_exercise: ""
+  lab_scope_and_safety: ""
+
+evidence:
+  required_artifacts: []
+  independent_demonstration: ""
+  mastery_conditions: []
+
+quality:
+  status: "draft"
+  content_version: "0.1.0"
+  last_official_reference_review: null
+  last_lab_validation: null

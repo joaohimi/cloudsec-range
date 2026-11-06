@@ -1,0 +1,811 @@
+{
+  "schema_version": 1,
+  "module_code": "LINUX-01",
+  "source_module_code": "M1",
+  "module_title": "Arquitetura e ecossistema",
+  "content_version": "1.0.0",
+  "content_status": "draft",
+  "topics": [
+    {
+      "code": "M01-T01",
+      "title": "Sistema operativo, kernel, GNU e distribuição",
+      "position": 1,
+      "description": "Definição e distinção entre sistema operativo, kernel Linux, ferramentas GNU, bibliotecas e distribuição."
+    },
+    {
+      "code": "M01-T02",
+      "title": "Espaço de utilizador, espaço de kernel e chamadas de sistema",
+      "position": 2,
+      "description": "Fronteira de privilégio, bibliotecas, interfaces de chamadas de sistema e fluxo de uma operação."
+    },
+    {
+      "code": "M01-T03",
+      "title": "Componentes, famílias e ciclo de vida das distribuições",
+      "position": 3,
+      "description": "Integração de componentes, gestores de pacotes, repositórios, dependências, lançamentos e suporte."
+    },
+    {
+      "code": "M01-T04",
+      "title": "Arquitetura de CPU e ABI",
+      "position": 4,
+      "description": "x86_64, AArch64, nomes de arquitetura em ferramentas Linux, ABI e compatibilidade binária."
+    },
+    {
+      "code": "M01-T05",
+      "title": "Arranque e processo init — visão geral",
+      "position": 5,
+      "description": "Firmware, bootloader, kernel, initramfs, sistema raiz, PID 1 e gestor de serviços."
+    },
+    {
+      "code": "M01-T06",
+      "title": "WSL 2, virtualização e fronteiras de segurança",
+      "position": 6,
+      "description": "Host Windows, VM gerida, kernel Linux partilhado, namespaces, distribuição e integração de ficheiros."
+    }
+  ],
+  "competencies": [
+    {
+      "code": "LINUX-M01-C01",
+      "title": "Distinguir sistema operativo, kernel, GNU/Linux e distribuição",
+      "description": "Explica com precisão a função de um sistema operativo, identifica o kernel Linux como componente central e distingue-o das bibliotecas, ferramentas, serviços e configurações que compõem uma distribuição utilizável.",
+      "topic_code": "M01-T01",
+      "prerequisite_codes": [],
+      "is_security_relevant": true,
+      "learning_requirements": [
+        "definition",
+        "prerequisites",
+        "terminology",
+        "internal_behaviour",
+        "standards_protocols",
+        "official_documentation",
+        "practical_examples",
+        "guided_lab",
+        "independent_exercise",
+        "troubleshooting",
+        "security_context",
+        "theory_assessment",
+        "practical_assessment",
+        "evidence"
+      ],
+      "internship_requirements": [
+        "company_context",
+        "responsible_role",
+        "affected_assets",
+        "ticket_request",
+        "initial_state",
+        "investigation",
+        "execution",
+        "validation",
+        "acceptance_criteria",
+        "technical_review",
+        "documentation",
+        "evidence"
+      ]
+    },
+    {
+      "code": "LINUX-M01-C02",
+      "title": "Explicar a fronteira entre user space e kernel space",
+      "description": "Descreve a separação de privilégios, o papel das bibliotecas e das chamadas de sistema e o fluxo geral de uma aplicação que solicita serviços ao kernel.",
+      "topic_code": "M01-T02",
+      "prerequisite_codes": [
+        "LINUX-M01-C01"
+      ],
+      "is_security_relevant": true,
+      "learning_requirements": [
+        "definition",
+        "prerequisites",
+        "terminology",
+        "internal_behaviour",
+        "standards_protocols",
+        "official_documentation",
+        "practical_examples",
+        "guided_lab",
+        "independent_exercise",
+        "troubleshooting",
+        "security_context",
+        "theory_assessment",
+        "practical_assessment",
+        "evidence"
+      ],
+      "internship_requirements": [
+        "company_context",
+        "responsible_role",
+        "affected_assets",
+        "ticket_request",
+        "initial_state",
+        "investigation",
+        "execution",
+        "validation",
+        "acceptance_criteria",
+        "technical_review",
+        "documentation",
+        "evidence"
+      ]
+    },
+    {
+      "code": "LINUX-M01-C03",
+      "title": "Identificar uma distribuição e interpretar o seu ecossistema",
+      "description": "Identifica distribuição, release e codename através de fontes apropriadas e explica o papel geral de pacotes, repositórios, dependências e ciclo de suporte.",
+      "topic_code": "M01-T03",
+      "prerequisite_codes": [
+        "LINUX-M01-C01"
+      ],
+      "is_security_relevant": true,
+      "learning_requirements": [
+        "definition",
+        "prerequisites",
+        "terminology",
+        "internal_behaviour",
+        "standards_protocols",
+        "official_documentation",
+        "practical_examples",
+        "guided_lab",
+        "independent_exercise",
+        "troubleshooting",
+        "security_context",
+        "theory_assessment",
+        "practical_assessment",
+        "evidence"
+      ],
+      "internship_requirements": [
+        "company_context",
+        "responsible_role",
+        "affected_assets",
+        "ticket_request",
+        "initial_state",
+        "investigation",
+        "execution",
+        "validation",
+        "acceptance_criteria",
+        "technical_review",
+        "documentation",
+        "evidence"
+      ]
+    },
+    {
+      "code": "LINUX-M01-C04",
+      "title": "Determinar arquitetura de CPU, arquitetura de pacotes e implicações de ABI",
+      "description": "Interpreta as arquiteturas reportadas pelo kernel e pelo gestor de pacotes, distingue x86_64/amd64 de AArch64/arm64 e explica consequências de compatibilidade de binários.",
+      "topic_code": "M01-T04",
+      "prerequisite_codes": [
+        "LINUX-M01-C01",
+        "LINUX-M01-C02"
+      ],
+      "is_security_relevant": false,
+      "learning_requirements": [
+        "definition",
+        "prerequisites",
+        "terminology",
+        "internal_behaviour",
+        "standards_protocols",
+        "official_documentation",
+        "practical_examples",
+        "guided_lab",
+        "independent_exercise",
+        "troubleshooting",
+        "theory_assessment",
+        "practical_assessment",
+        "evidence"
+      ],
+      "internship_requirements": [
+        "company_context",
+        "responsible_role",
+        "affected_assets",
+        "ticket_request",
+        "initial_state",
+        "investigation",
+        "execution",
+        "validation",
+        "acceptance_criteria",
+        "technical_review",
+        "documentation",
+        "evidence"
+      ]
+    },
+    {
+      "code": "LINUX-M01-C05",
+      "title": "Descrever o arranque e identificar o processo PID 1",
+      "description": "Descreve o fluxo normal de arranque de um sistema Linux tradicional, identifica o papel de PID 1 e distingue kernel de um gestor de serviços como systemd sem assumir que este está sempre ativo.",
+      "topic_code": "M01-T05",
+      "prerequisite_codes": [
+        "LINUX-M01-C01",
+        "LINUX-M01-C02"
+      ],
+      "is_security_relevant": true,
+      "learning_requirements": [
+        "definition",
+        "prerequisites",
+        "terminology",
+        "internal_behaviour",
+        "standards_protocols",
+        "official_documentation",
+        "practical_examples",
+        "guided_lab",
+        "independent_exercise",
+        "troubleshooting",
+        "security_context",
+        "theory_assessment",
+        "practical_assessment",
+        "evidence"
+      ],
+      "internship_requirements": [
+        "company_context",
+        "responsible_role",
+        "affected_assets",
+        "ticket_request",
+        "initial_state",
+        "investigation",
+        "execution",
+        "validation",
+        "acceptance_criteria",
+        "technical_review",
+        "documentation",
+        "evidence"
+      ]
+    },
+    {
+      "code": "LINUX-M01-C06",
+      "title": "Mapear a arquitetura WSL 2 e as suas fronteiras de segurança",
+      "description": "Distingue Windows host, VM gerida pelo WSL 2, kernel Linux e distribuição; identifica elementos partilhados e namespaces isolados e explica limitações operacionais e de segurança do ambiente WSL 2.",
+      "topic_code": "M01-T06",
+      "prerequisite_codes": [
+        "LINUX-M01-C01",
+        "LINUX-M01-C02",
+        "LINUX-M01-C03"
+      ],
+      "is_security_relevant": true,
+      "learning_requirements": [
+        "definition",
+        "prerequisites",
+        "terminology",
+        "internal_behaviour",
+        "standards_protocols",
+        "official_documentation",
+        "practical_examples",
+        "guided_lab",
+        "independent_exercise",
+        "troubleshooting",
+        "security_context",
+        "theory_assessment",
+        "practical_assessment",
+        "evidence"
+      ],
+      "internship_requirements": [
+        "company_context",
+        "responsible_role",
+        "affected_assets",
+        "ticket_request",
+        "initial_state",
+        "investigation",
+        "execution",
+        "validation",
+        "acceptance_criteria",
+        "technical_review",
+        "documentation",
+        "evidence"
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "code": "LINUX-M01-L01",
+      "title": "Sistema operativo, GNU e Linux",
+      "sequence": 1,
+      "minutes": 35,
+      "file": "lessons/01-sistema-operativo-gnu-linux.md",
+      "summary": "Distingue sistema operativo, kernel Linux, GNU, bibliotecas e distribuição; constrói o modelo de camadas usado no troubleshooting.",
+      "competency_codes": [
+        "LINUX-M01-C01"
+      ]
+    },
+    {
+      "code": "LINUX-M01-L02",
+      "title": "Espaço de utilizador, kernel e system calls",
+      "sequence": 2,
+      "minutes": 40,
+      "file": "lessons/02-user-space-kernel-syscalls.md",
+      "summary": "Explica separação de privilégios, bibliotecas, chamadas de sistema e o percurso de uma operação de ficheiro.",
+      "competency_codes": [
+        "LINUX-M01-C01",
+        "LINUX-M01-C02"
+      ]
+    },
+    {
+      "code": "LINUX-M01-L03",
+      "title": "Distribuições e ecossistema",
+      "sequence": 3,
+      "minutes": 35,
+      "file": "lessons/03-distribuicoes-ecossistema.md",
+      "summary": "Identifica componentes, famílias, pacotes, repositórios e ciclo de suporte; aprende a consultar a identificação do sistema.",
+      "competency_codes": [
+        "LINUX-M01-C01",
+        "LINUX-M01-C03"
+      ]
+    },
+    {
+      "code": "LINUX-M01-L04",
+      "title": "Arquitetura de CPU e ABI",
+      "sequence": 4,
+      "minutes": 30,
+      "file": "lessons/04-arquitetura-cpu-abi.md",
+      "summary": "Interpreta arquitetura do kernel e arquitetura dpkg, compreende ABI e relaciona arquitetura com compatibilidade de binários e imagens.",
+      "competency_codes": [
+        "LINUX-M01-C04"
+      ]
+    },
+    {
+      "code": "LINUX-M01-L05",
+      "title": "Arranque e init — visão arquitetural",
+      "sequence": 5,
+      "minutes": 35,
+      "file": "lessons/05-arranque-e-init.md",
+      "summary": "Descreve a sequência geral de arranque, identifica PID 1 e distingue kernel, init e gestor de serviços.",
+      "competency_codes": [
+        "LINUX-M01-C05"
+      ]
+    },
+    {
+      "code": "LINUX-M01-L06",
+      "title": "WSL 2 e fronteiras de segurança",
+      "sequence": 6,
+      "minutes": 45,
+      "file": "lessons/06-wsl2-e-seguranca.md",
+      "summary": "Mapeia Windows, WSL 2, kernel e Ubuntu; avalia partilha de recursos, namespaces, ficheiros e limitações de isolamento.",
+      "competency_codes": [
+        "LINUX-M01-C01",
+        "LINUX-M01-C02",
+        "LINUX-M01-C03",
+        "LINUX-M01-C06"
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "code": "LINUX-M01-R01",
+      "title": "What is Linux? — The Linux Kernel Organization",
+      "url": "https://www.kernel.org/linux.html",
+      "publisher": "The Linux Kernel Organization",
+      "resource_type": "official_documentation",
+      "product_version": "consultado em 2026-11-02",
+      "competency_codes": [
+        "LINUX-M01-C01"
+      ]
+    },
+    {
+      "code": "LINUX-M01-R02",
+      "title": "The Linux Kernel documentation",
+      "url": "https://docs.kernel.org/",
+      "publisher": "Linux Kernel Documentation",
+      "resource_type": "official_documentation",
+      "product_version": "documentação online corrente",
+      "competency_codes": [
+        "LINUX-M01-C01",
+        "LINUX-M01-C02",
+        "LINUX-M01-C04",
+        "LINUX-M01-C05"
+      ]
+    },
+    {
+      "code": "LINUX-M01-R03",
+      "title": "syscalls(2) — Linux manual page",
+      "url": "https://man7.org/linux/man-pages/man2/syscalls.2.html",
+      "publisher": "Linux man-pages project",
+      "resource_type": "official_documentation",
+      "product_version": "consultado em 2026-11-02",
+      "competency_codes": [
+        "LINUX-M01-C02"
+      ]
+    },
+    {
+      "code": "LINUX-M01-R04",
+      "title": "The GNU Project — Linux and the GNU System",
+      "url": "https://www.gnu.org/gnu/linux-and-gnu.html",
+      "publisher": "GNU Project",
+      "resource_type": "official_documentation",
+      "product_version": "consultado em 2026-11-02",
+      "competency_codes": [
+        "LINUX-M01-C01"
+      ]
+    },
+    {
+      "code": "LINUX-M01-R05",
+      "title": "About the Ubuntu project",
+      "url": "https://ubuntu.com/about",
+      "publisher": "Canonical / Ubuntu",
+      "resource_type": "official_documentation",
+      "product_version": "consultado em 2026-11-02",
+      "competency_codes": [
+        "LINUX-M01-C03"
+      ]
+    },
+    {
+      "code": "LINUX-M01-R06",
+      "title": "Ubuntu Server documentation",
+      "url": "https://ubuntu.com/server/docs/",
+      "publisher": "Canonical / Ubuntu",
+      "resource_type": "official_documentation",
+      "product_version": "documentação online corrente",
+      "competency_codes": [
+        "LINUX-M01-C03",
+        "LINUX-M01-C05"
+      ]
+    },
+    {
+      "code": "LINUX-M01-R07",
+      "title": "What is the Windows Subsystem for Linux?",
+      "url": "https://learn.microsoft.com/en-us/windows/wsl/about",
+      "publisher": "Microsoft Learn",
+      "resource_type": "official_documentation",
+      "product_version": "consultado em 2026-11-02",
+      "competency_codes": [
+        "LINUX-M01-C06"
+      ]
+    },
+    {
+      "code": "LINUX-M01-R08",
+      "title": "Comparing WSL Versions",
+      "url": "https://learn.microsoft.com/en-us/windows/wsl/compare-versions",
+      "publisher": "Microsoft Learn",
+      "resource_type": "official_documentation",
+      "product_version": "consultado em 2026-11-02",
+      "competency_codes": [
+        "LINUX-M01-C04",
+        "LINUX-M01-C06"
+      ]
+    },
+    {
+      "code": "LINUX-M01-R09",
+      "title": "System and Service Manager — systemd",
+      "url": "https://systemd.io/",
+      "publisher": "systemd project",
+      "resource_type": "official_documentation",
+      "product_version": "consultado em 2026-11-02",
+      "competency_codes": [
+        "LINUX-M01-C05"
+      ]
+    }
+  ],
+  "labs": [
+    {
+      "code": "LINUX-M01-LAB01",
+      "title": "Inventário arquitetural do Ubuntu no WSL 2",
+      "minutes": 35,
+      "description": "Laboratório somente de leitura para recolher evidências da distribuição, kernel, arquitetura, processo PID 1, virtualização e pontos de montagem. Não instala nem altera qualquer componente.",
+      "manifest": {
+        "objective": "Construir um inventário técnico correto e separar factos observados de inferências.",
+        "environment": "Windows com WSL 2 e Ubuntu 24.04; comandos Linux executados no terminal Ubuntu e comandos wsl executados no PowerShell.",
+        "safety": {
+          "profile": "local-safe",
+          "changes_system": false,
+          "requires_sudo": false,
+          "network_access": false,
+          "destructive_operations": false,
+          "allowed_scope": "Comandos de inventário read-only e leitura de ficheiros de identificação."
+        },
+        "prerequisites": [
+          "A distribuição Ubuntu já inicia normalmente.",
+          "O utilizador tem acesso ao terminal Ubuntu e ao PowerShell."
+        ],
+        "steps": [
+          {
+            "title": "Identificar a distribuição",
+            "commands": [
+              "cat /etc/os-release"
+            ],
+            "expected": "Campos como NAME, ID, VERSION_ID e VERSION_CODENAME. Regista os teus valores reais.",
+            "why": "Identifica a distribuição e a release; não identifica a versão do kernel."
+          },
+          {
+            "title": "Identificar kernel e arquitetura",
+            "commands": [
+              "uname -s",
+              "uname -r",
+              "uname -m",
+              "getconf LONG_BIT",
+              "dpkg --print-architecture"
+            ],
+            "expected": "Sistema, release do kernel, arquitetura do kernel, largura de bits e arquitetura dpkg.",
+            "why": "Distingue versão do kernel de release da distribuição e mostra nomes de arquitetura usados por camadas diferentes."
+          },
+          {
+            "title": "Identificar o processo inicial e a virtualização",
+            "commands": [
+              "ps -p 1 -o pid=,comm=,args=",
+              "systemd-detect-virt"
+            ],
+            "expected": "PID 1 e identificação do ambiente de virtualização, se a ferramenta estiver disponível.",
+            "why": "Evita assumir que systemd está ativo ou que o Linux corre diretamente sobre hardware físico."
+          },
+          {
+            "title": "Observar os sistemas de ficheiros",
+            "commands": [
+              "findmnt -T /",
+              "findmnt -T /mnt/c"
+            ],
+            "expected": "Tipo e origem dos sistemas de ficheiros que contêm / e /mnt/c, quando o segundo caminho está montado.",
+            "why": "Distingue o sistema de ficheiros da distribuição do volume Windows montado."
+          },
+          {
+            "title": "Observar a perspetiva do Windows",
+            "shell": "PowerShell",
+            "commands": [
+              "wsl --status",
+              "wsl --list --verbose"
+            ],
+            "expected": "Estado do WSL e versão atribuída a cada distribuição.",
+            "why": "Complementa as evidências Linux com a informação do gestor WSL."
+          }
+        ],
+        "deliverables": [
+          "Tabela com distribuição/release, kernel, arquitetura, PID 1 e virtualização.",
+          "Uma frase que distingue informação observada, interpretação e limitações."
+        ],
+        "cleanup": "Não há alterações de sistema para reverter. Os resultados devem ser guardados apenas no relatório local do Lab 2."
+      },
+      "competency_codes": [
+        "LINUX-M01-C01",
+        "LINUX-M01-C03",
+        "LINUX-M01-C04",
+        "LINUX-M01-C05",
+        "LINUX-M01-C06"
+      ]
+    },
+    {
+      "code": "LINUX-M01-LAB02",
+      "title": "Mapa de arquitetura e relatório de evidências",
+      "minutes": 45,
+      "description": "Laboratório individual que transforma os resultados do inventário num diagrama textual e num relatório profissional guardado na home do utilizador.",
+      "manifest": {
+        "objective": "Documentar as camadas do ambiente e produzir evidência reproduzível para troubleshooting e inventário.",
+        "environment": "WSL 2 Ubuntu 24.04, apenas no diretório ~/cloudsec-range-labs/linux-m01.",
+        "safety": {
+          "profile": "local-safe",
+          "changes_system": false,
+          "requires_sudo": false,
+          "network_access": false,
+          "destructive_operations": false,
+          "allowed_scope": "Criar e editar apenas ficheiros dentro de ~/cloudsec-range-labs/linux-m01."
+        },
+        "steps": [
+          {
+            "title": "Criar a pasta de trabalho",
+            "commands": [
+              "mkdir -p ~/cloudsec-range-labs/linux-m01",
+              "cd ~/cloudsec-range-labs/linux-m01"
+            ],
+            "why": "Mantém evidências de treino separadas do código e da configuração do sistema."
+          },
+          {
+            "title": "Guardar inventário básico",
+            "commands": [
+              "{ date -Is; hostname; uname -srm; cat /etc/os-release; dpkg --print-architecture; ps -p 1 -o pid=,comm=,args=; systemd-detect-virt 2>/dev/null || true; } > inventory.txt"
+            ],
+            "why": "Cria registo que pode ser revisto. A falha opcional de systemd-detect-virt não interrompe o relatório."
+          },
+          {
+            "title": "Criar mapa textual",
+            "commands": [
+              "cat > architecture-map.md <<'MAP'\n# Mapa de arquitetura — preencher com os teus resultados\n\nWindows host\n  └── WSL 2 managed VM\n      └── Kernel Linux partilhado pelo ambiente WSL 2\n          └── Distribuição Ubuntu (user space e sistema de ficheiros)\n              ├── Bibliotecas e ferramentas\n              ├── Shell e processos\n              └── Serviços (identificar o PID 1 real)\n\n## Evidências\n- Distribuição/release: PREENCHER\n- Kernel: PREENCHER\n- Arquitetura kernel: PREENCHER\n- Arquitetura dpkg: PREENCHER\n- PID 1: PREENCHER\n- Virtualização: PREENCHER\n- Limitações/observações: PREENCHER\nMAP"
+            ],
+            "why": "Força a distinguir camada, componente e evidência em vez de decorar nomes."
+          },
+          {
+            "title": "Validar o ficheiro",
+            "commands": [
+              "sed -n '1,160p' inventory.txt",
+              "sed -n '1,200p' architecture-map.md",
+              "ls -l"
+            ],
+            "why": "Confirma que os artefactos foram gerados e que não contêm segredos ou dados pessoais desnecessários."
+          }
+        ],
+        "independent_tasks": [
+          "Substitui todos os campos PREENCHER por resultados reais.",
+          "Acrescenta duas diferenças entre WSL 2 e uma VM Linux independente.",
+          "Acrescenta três implicações de segurança/operacionais do ambiente.",
+          "Explica por que o valor de uname -r não identifica sozinho a distribuição."
+        ],
+        "deliverables": [
+          "inventory.txt",
+          "architecture-map.md"
+        ],
+        "cleanup": "Os artefactos podem permanecer como evidência de portfólio. Para remover apenas esta pasta de laboratório, confirma primeiro o caminho com pwd e depois remove exclusivamente ~/cloudsec-range-labs/linux-m01; não uses curingas nem sudo."
+      },
+      "competency_codes": [
+        "LINUX-M01-C01",
+        "LINUX-M01-C02",
+        "LINUX-M01-C03",
+        "LINUX-M01-C04",
+        "LINUX-M01-C05",
+        "LINUX-M01-C06"
+      ]
+    }
+  ],
+  "ticket": {
+    "ticket_key": "NDS-LNX-001",
+    "title": "Inventariar e documentar a arquitetura do ambiente Linux de desenvolvimento",
+    "department": "Systems Administration",
+    "priority": "normal",
+    "description": "A equipa de Cloud Engineering está a preparar um novo serviço de API e recebeu um inventário incompleto que identifica apenas o ambiente como 'Linux'. A equipa de Segurança precisa de uma identificação tecnicamente precisa antes de validar compatibilidade dos agentes, imagem de runtime, atualizações e fronteiras de execução. O teu trabalho é recolher evidências do ambiente de laboratório atribuído, separar host Windows, camada WSL 2, kernel e user space da distribuição e produzir um registo técnico. O alvo desta simulação é a tua distribuição WSL 2 local; não afirmes que ela representa um servidor de produção real.",
+    "business_impact": "Inventário impreciso pode levar a instalar agentes incompatíveis, aplicar patches ao componente errado, escolher imagens de container para arquitetura incorreta ou assumir um nível de isolamento que o ambiente não oferece.",
+    "asset_context": "Ativo simulado: NDS-DEV-LNX-001. Ambiente de formação local: Windows host + WSL 2 managed VM + Ubuntu. Não é um ativo real da empresa nem um servidor de produção.",
+    "assigned_role": "Junior Linux Systems Administrator, sob revisão de Cloud Engineering",
+    "initial_state": "O inventário inicial contém apenas a etiqueta 'Linux'. Não existem registos confirmados de distribuição, release, kernel, arquitetura, processo PID 1 ou tipo de virtualização.",
+    "investigation_steps": [
+      "Confirmar o âmbito: apenas a distribuição WSL 2 local, sem aceder a outros sistemas.",
+      "Recolher /etc/os-release para identificar distribuição, release e codename.",
+      "Recolher uname -r e uname -m para identificar kernel e arquitetura reportada.",
+      "Recolher dpkg --print-architecture e explicar diferenças de nomenclatura.",
+      "Identificar PID 1 e a virtualização com ferramentas disponíveis, sem assumir systemd.",
+      "Consultar wsl --status e wsl --list --verbose no PowerShell para corroborar a camada WSL.",
+      "Comparar as evidências e identificar o que não pode ser concluído a partir delas."
+    ],
+    "execution_steps": [
+      "Produzir uma tabela de inventário com valor, comando de origem e interpretação.",
+      "Desenhar o mapa Windows host → WSL 2 managed VM → kernel Linux → user space Ubuntu.",
+      "Documentar pelo menos três implicações técnicas ou de segurança do ambiente WSL 2.",
+      "Guardar os ficheiros de evidência na pasta do laboratório, sem recolher segredos."
+    ],
+    "validation_steps": [
+      "Verificar que a versão da distribuição provém de /etc/os-release e não foi inferida de uname.",
+      "Verificar que kernel e arquitetura estão registados separadamente.",
+      "Verificar que o valor de PID 1 foi observado, não assumido.",
+      "Verificar que o relatório identifica explicitamente o alvo como WSL 2 e não como servidor Linux físico.",
+      "Verificar que não houve alterações de sistema e que os artefactos não contêm segredos."
+    ],
+    "safety_scope": "Inventário read-only e documentação local. Proibido instalar pacotes, executar sudo, alterar kernel, bootloader, systemd, rede, armazenamento, políticas ou ficheiros de configuração do host. Não fazer scanning, exploração ou acesso a ativos externos.",
+    "acceptance_criteria": [
+      "Distribuição, release e codename identificados com evidência de /etc/os-release.",
+      "Release do kernel e arquitetura reportadas por uname documentadas separadamente.",
+      "Arquitetura do gestor de pacotes documentada e comparada com uname -m.",
+      "PID 1 identificado a partir de saída real do comando.",
+      "WSL 2 corroborado pela perspetiva Windows ou pela evidência de virtualização disponível.",
+      "Diagrama distingue Windows host, VM gerida, kernel e user space da distribuição.",
+      "Relatório explica pelo menos três limitações/implicações de segurança e compatibilidade.",
+      "Evidências reproduzíveis, sanitizadas e sem dados secretos.",
+      "Nenhuma alteração de configuração ou serviço foi realizada."
+    ],
+    "competency_codes": [
+      "LINUX-M01-C01",
+      "LINUX-M01-C02",
+      "LINUX-M01-C03",
+      "LINUX-M01-C04",
+      "LINUX-M01-C05",
+      "LINUX-M01-C06"
+    ]
+  },
+  "assessment": {
+    "code": "LINUX-M01-ASSESSMENT-01",
+    "title": "Avaliação teórica e prática — Arquitetura e ecossistema Linux",
+    "assessment_type": "mixed",
+    "total_points": 100,
+    "mastery_threshold": 80.0,
+    "competency_codes": [
+      "LINUX-M01-C01",
+      "LINUX-M01-C02",
+      "LINUX-M01-C03",
+      "LINUX-M01-C04",
+      "LINUX-M01-C05",
+      "LINUX-M01-C06"
+    ],
+    "rubric": {
+      "duration_minutes": 60,
+      "instructions": "Responde sem copiar definições. Justifica cada conclusão com conceitos ou evidências. A parte prática exige comandos executados no teu ambiente. A pontuação é atribuída após revisão; a submissão não é corrigida automaticamente por esta versão da plataforma.",
+      "questions": [
+        {
+          "id": "Q01",
+          "points": 7,
+          "type": "explanation",
+          "prompt": "Define sistema operativo e kernel. Explica por que Linux, em sentido técnico, não é sinónimo de Ubuntu."
+        },
+        {
+          "id": "Q02",
+          "points": 7,
+          "type": "architecture",
+          "prompt": "Identifica pelo menos cinco responsabilidades do kernel e explica como uma aplicação beneficia dessas abstrações."
+        },
+        {
+          "id": "Q03",
+          "points": 9,
+          "type": "architecture",
+          "prompt": "Descreve o percurso de uma operação de leitura de ficheiro desde um programa de espaço de utilizador até ao kernel e de volta ao programa. Distingue biblioteca de chamada de sistema."
+        },
+        {
+          "id": "Q04",
+          "points": 7,
+          "type": "comparison",
+          "prompt": "Distingue distribuição, pacote, repositório, dependência e gestor de pacotes. Dá um exemplo de família Debian/Ubuntu e outro exemplo de família RPM."
+        },
+        {
+          "id": "Q05",
+          "points": 7,
+          "type": "interpretation",
+          "prompt": "Explica por que /etc/os-release e uname -r respondem a perguntas diferentes. Que campo consultarias para obter a versão da distribuição?"
+        },
+        {
+          "id": "Q06",
+          "points": 7,
+          "type": "architecture",
+          "prompt": "Explica a diferença entre x86_64 e amd64 neste contexto. O que pode acontecer quando um binário ou imagem de container foi construído para outra arquitetura?"
+        },
+        {
+          "id": "Q07",
+          "points": 7,
+          "type": "architecture",
+          "prompt": "Descreve a sequência típica firmware → bootloader → kernel → initramfs → sistema raiz → PID 1. Indica duas razões pelas quais esta sequência pode variar."
+        },
+        {
+          "id": "Q08",
+          "points": 7,
+          "type": "interpretation",
+          "prompt": "O comando ps -p 1 -o pid=,comm=,args= mostra um processo diferente de systemd. O que concluis e o que não deves concluir?"
+        },
+        {
+          "id": "Q09",
+          "points": 9,
+          "type": "architecture",
+          "prompt": "Explica a arquitetura WSL 2 e identifica pelo menos três recursos/elementos partilhados e dois namespaces isolados entre distribuições, segundo a documentação Microsoft."
+        },
+        {
+          "id": "Q10",
+          "points": 8,
+          "type": "security",
+          "prompt": "Explica por que sudo dentro do Ubuntu WSL não equivale a executar como Administrador do Windows e por que WSL 2 não deve ser tratado como isolamento de kernel independente entre distribuições."
+        },
+        {
+          "id": "Q11",
+          "points": 12,
+          "type": "practical",
+          "prompt": "Executa e interpreta: cat /etc/os-release; uname -r; uname -m; dpkg --print-architecture; ps -p 1 -o pid=,comm=,args=. Apresenta os valores reais e o que cada comando prova."
+        },
+        {
+          "id": "Q12",
+          "points": 13,
+          "type": "incident",
+          "prompt": "Cenário: um ticket informa apenas 'Linux 64-bit' e pede instalar um agente de segurança. Enumera a informação que falta, os comandos/fontes que consultarias e os riscos de avançar sem validar distribuição, release, arquitetura e contexto de virtualização."
+        }
+      ],
+      "scoring_rubric": [
+        {
+          "criterion": "Precisão conceptual e terminologia",
+          "points": 25,
+          "description": "Distingue kernel, distribuição, user space, biblioteca, syscall e sistema operativo sem misturar camadas."
+        },
+        {
+          "criterion": "Interpretação de evidências e comandos",
+          "points": 20,
+          "description": "Executa os comandos adequados, regista valores reais e explica limites de cada fonte."
+        },
+        {
+          "criterion": "Arquitetura WSL 2 e fronteiras",
+          "points": 20,
+          "description": "Explica a VM gerida, kernel partilhado, namespaces e integração Windows/Linux."
+        },
+        {
+          "criterion": "Distribuição, arquitetura e arranque",
+          "points": 15,
+          "description": "Interpreta release, ABI/arquitetura, PID 1 e cadeia de arranque."
+        },
+        {
+          "criterion": "Raciocínio de segurança",
+          "points": 10,
+          "description": "Identifica fronteiras de privilégio, impacto do kernel partilhado e limites de confiança."
+        },
+        {
+          "criterion": "Relatório profissional e evidências",
+          "points": 10,
+          "description": "Entrega inventário claro, reproduzível, sanitizado e útil para decisão operacional."
+        }
+      ],
+      "critical_errors": [
+        "Afirmar que o kernel Linux é a mesma coisa que a distribuição Ubuntu.",
+        "Usar uname -r como prova da versão da distribuição.",
+        "Afirmar que sudo no WSL concede automaticamente privilégios de Administrador do Windows.",
+        "Afirmar que cada distribuição WSL 2 tem um kernel independente.",
+        "Inventar valores de inventário sem executar ou consultar os comandos."
+      ],
+      "mastery_rule": "Aprovação requer pelo menos 80/100, nenhum erro crítico não corrigido e demonstração prática de inventário. Se existir erro crítico, a competência afetada permanece em reforço mesmo que a nota total seja 80 ou superior.",
+      "feedback_policy": "A correção deve classificar cada resposta como correta, incorreta, incompleta ou tecnicamente imprecisa, justificar a pontuação, identificar a lacuna e indicar a prática de reforço antes de nova tentativa."
+    }
+  }
+}
